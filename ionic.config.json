@@ -1,5 +1,8 @@
 {
   "name": "Semente",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }

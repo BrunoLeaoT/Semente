@@ -1,20 +1,27 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Semente
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-list padding>
+        <ion-list-header>
+            Compartile Livros!
+        </ion-list-header>
+        <ion-select>
+          <ion-select-option >Minimos Contos</ion-select-option>
+          <ion-select-option >Robson Crusoé</ion-select-option>
+          <ion-select-option >Dom casmurro</ion-select-option>
+        </ion-select>
+        <ion-spinner name="crescent" *ngIf="gettingDevices"></ion-spinner>
+        <ion-button color="dark" (click)='download()' >Baixe o livo selecionado</ion-button>
+        <ion-button color="dark" (click)='upload()'>Upload File</ion-button>
+        <ion-label><b>{{uploadText}}</b></ion-label>
+        <ion-button color="dark" (click)="abortUpload()()">Cancel Upload</ion-button>
+        <img src="src\app\home\dolphin.jpg">
+    </ion-list>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
 </ion-content>
